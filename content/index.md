@@ -13,7 +13,7 @@ Here's the deal, **I like Tolkien**.
 - [Why Glorfindel is More Impressive than Legolas](/blog/glorfindel)
 - [Why Tom Bombadil Was a Mistake](/blog/tom)
 - [The Unparalleled Majesty of "The Lord of the Rings"](/blog/majesty)
-
+ 
 ## Reasons I like Tolkien
 
 - You can spend years studying the legendarium and still not understand its depths
@@ -43,4 +43,6 @@ func main(){
 
 Want to get in touch? [Contact me here](/contact).
 
-This site was generated with a custom-built [static site generator](https://www.boot.dev/courses/build-static-site-generator-python) from the course on [Boot.dev](https://www.boot.dev).
+This site was generated with a
+custom-built [static site generator](https://www.boot.dev/courses/build-static-site-generator-python) from the course
+on [Boot.dev](https://www.boot.dev).
