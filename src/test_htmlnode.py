@@ -9,11 +9,11 @@ class TestHTMLNode(unittest.TestCase):
             "div",
             "Hello, world!",
             None,
-            {"class": "greeting", "href": "https://boot.dev"},
+            {"class": "greeting", "href": "https://edanriell.com/"},
         )
         self.assertEqual(
             node.props_to_html(),
-            ' class="greeting" href="https://boot.dev"',
+            ' class="greeting" href="https://edanriell.com/"',
         )
 
     def test_values(self):
@@ -108,7 +108,7 @@ class TestHTMLNode(unittest.TestCase):
             node.to_html(),
             "<h2><b>Bold text</b>Normal text<i>italic text</i>Normal text</h2>",
         )
- 
+
 
 if __name__ == "__main__":
     unittest.main()
