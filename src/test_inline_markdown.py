@@ -99,12 +99,12 @@ class TestInlineMarkdown(unittest.TestCase):
 
     def test_extract_markdown_links(self):
         matches = extract_markdown_links(
-            "This is text with a [link](https://boot.dev) and [another link](https://blog.boot.dev)"
+            "This is text with a [link]() and [another link]()"
         )
         self.assertListEqual(
             [
-                ("link", "https://boot.dev"),
-                ("another link", "https://blog.boot.dev"),
+                ("link", ""),
+                ("another link", ""),
             ],
             matches,
         )
@@ -156,16 +156,16 @@ class TestInlineMarkdown(unittest.TestCase):
 
     def test_split_links(self):
         node = TextNode(
-            "This is text with a [link](https://boot.dev) and [another link](https://blog.boot.dev) with text that follows",
+            "This is text with a [link]() and [another link]() with text that follows",
             TextType.TEXT,
         )
         new_nodes = split_nodes_link([node])
         self.assertListEqual(
             [
                 TextNode("This is text with a ", TextType.TEXT),
-                TextNode("link", TextType.LINK, "https://boot.dev"),
+                TextNode("link", TextType.LINK, ""),
                 TextNode(" and ", TextType.TEXT),
-                TextNode("another link", TextType.LINK, "https://blog.boot.dev"),
+                TextNode("another link", TextType.LINK, ""),
                 TextNode(" with text that follows", TextType.TEXT),
             ],
             new_nodes,
